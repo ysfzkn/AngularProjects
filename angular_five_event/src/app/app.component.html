@@ -1,0 +1,50 @@
+<div class="jumbotron text-center">
+
+    <h3>Show Current</h3>
+    <input type="text" (keyup)="getVal($event)" />
+    <hello curr="{{ curr }}"></hello>
+
+</div>    
+
+<hr width="100%" />
+
+<div class="jumbotron text-center mt-5">
+    <h3>Show or Hide Text - Button Click</h3>
+  </div>
+  <div class="jumbotron text-center">
+    <h1 *ngIf="textShow">Button Click Show/Hide!</h1>
+    <button type="button" (click) = "showText()" class="btn btn-primary mr-2">Show text</button> 
+    <button type="button" (click) = "hideText()" class="btn btn-danger">Hide Text</button>
+  </div>
+
+  <hr width="100%" />
+
+  <div class="jumbotron text-center mt-5">
+    <h3>- Key Press Example -  <br>
+        - If you put input 'Hello' and press enter you will see this text -</h3>
+    <input (keydown)="onKeyPress($event)">
+  </div>
+  <div class="jumbotron text-center">
+    <h1 *ngIf="showkey">Hello</h1>
+  </div>
+
+  <hr width="100%" />
+
+  <div class="jumbotron text-center mt-5">
+
+    <button type="button" class="btn btn-primary" (mouseover)="mouseover()"><b>Mouseover</b> here</button>
+    <h1>{{counter}} </h1>
+   
+  </div>
+
+  <hr width="100%" />
+
+  <div class="jumbotron text-center mt-5">
+
+    <input (copy)="copy()" value="Copy this text" />
+
+    <h3>The text has been copied {{counter2}} times.</h3>
+   
+  </div>
+
+  <hr width="100%" />
